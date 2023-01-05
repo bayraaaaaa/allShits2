@@ -24,9 +24,9 @@ const PostSchema = new mongoose.Schema({
   //   unique: true,
   // },
 });
+
 PostSchema.path("userName").validate((userName) => {
   return !/[0-9]/.test(userName);
 }, "nerend too orh ysgui");
 const Post = mongoose.model("Post", PostSchema);
-
 export default Post;
